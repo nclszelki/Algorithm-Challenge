@@ -43,11 +43,10 @@ median = (max(LEFT_PART) + min(RIGHT_PART))/2
 How do we ensure 1) and 2)?
 we need to make sure that
 ```python
-# when n + m is even
-i + j = m - i + n - j 
-# when n + m is odd, place the extra one element in LEFT_PART
-i + j = m - i + n - j + 1
-# if n >=m
+# Since
+# when n + m is even , i + j = m - i + n - j 
+# when n + m is odd, place the extra one element in LEFT_PART, i + j = m - i + n - j + 1
+# when n >= m (  
 i = [0~m] j = (m + n + 1)/2 - i
 # (since m+n+1/2 = m+n/2) 
 B[j-1] <= A[i] and A[i-1] <= B[j]
